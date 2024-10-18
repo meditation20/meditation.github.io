@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.main_box{
+    background: #0b1218;
+    height: 100%;
+    background-size: cover;
+} 
+
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu{
+    position: fixed;
+     left: -300px;   /*the text goes out of screen as it is important for sidebar */
+    height: 100vh;
+    width: 300px;
+    background-color: #131d28;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+    line-height: 60px;
+    height: 60px;
+    
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 30px;
+    color: orange;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two i{
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    position:absolute;
+    left: 275px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li{
+    margin-top: 10px;
+    padding: 14px 20px;
+}
+
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i{
+    padding-right: 10px;
+}
+
+.sidebar_menu .social_media{
+   
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+}
+
+.sidebar_menu .social_media i{
+    color: white;
+    opacity: 0.5;
+    padding: 0.5px; 
+}
+
+#check{
+    display: none;
+}
+
+
+.sidebar_menu .menu li:hover{
+   background-color: orange;
+}
+
+.btn_one:hover{
+    font-size: 40px;
+
+}
+
+.btn_two:hover{
+    font-size: 30px;
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check:checked~ .sidebar_menu{
+    left: 0;
+}
+
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+
+#check:checked ~  .sidebar_menu .btn_two i {
+    opacity: 1;
+}
+
+
+.main-content {
+    flex: 1; /* Take remaining space */
+    padding: 40px;
+   
+    transition: margin-left 0.3s ease;
+    color: white;
+    /* text-align: center; */
+}
+
+#check:checked ~ .main-content {
+    margin-left: 300px; /* Adjust for collapsed sidebar */
+}
+
+header{
+    height: 70px;
+   
+}
+
+.search input{
+    flex: 1;
+    width: 500px;
+    background: transparent;
+    padding: 10px;
+    color: white;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.card{
+    background-color:#131d28 ;
+    padding:30px 15px;
+
+}
+
+.card_icon{ 
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.card_icon i{
+    height: 60px;
+    width: 60px;
+    color: white;
+    font-size: 50px;
+    border-radius: 6px;
+   
+}  
+
+.follow i{
+    color: blue;
+    background-color: aliceblue;
+
+}
+
+.likes i{
+    color: red;
+    background-color: aliceblue;
+}
+
+.comments i{
+    color: rgb(211, 211, 8);
+    background-color: aliceblue;
+}
+
+.card_info{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card_info{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card_info small{
+    display: inline-block;
+    color: orange;
+    font-weight: 500;
+}
+
+.card_images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card_images div{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: relative;
+   
+    /* margin-left: 15px; */
+}
+
+.card_images div:first-child{
+    margin-left: 0;
+
+}
+
+.chart_grid{
+    display: grid;
+    grid-template-columns: 60% auto;
+    margin-top: 3rem;
+    gap: 2rem;
+
+}
+
+
+.chart_follow , .chart_sales{
+    background-color: #131d28;
+    padding: 1rem;
+    border-radius: 3px;
+       
+}
+
+.chart_head{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: aliceblue;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+} 
+
+.close_mobile_menu{
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: calc(100% - 280px);
+    
+    z-index: 100;
+    transition: right 300ms;
+}
+
+@media only screen and (max-width:1124px){
+    #menu_toggle:checked~.sidebar .brand h2{
+        display: block;
+    }
+    
+    #menu_toggle~.sidebar .side_img{
+        height: 120px;
+        width: 120px;
+    }
+    
+    #menu_toggle~.sidebar .user{
+        display: block;
+    }
+    
+    #menu_toggle~.sidebar li a span :last-child{
+        display: inline-block;
+    }
+    
+    #menu_toggle~.sidebar {
+        width: 280px;
+        z-index: 100;
+    }
+    
+    #menu_toggle~.close_mobile_menu {
+        right: 0;
+    }
+    
+    
+}
+
+@media only screen and (max-width:845px){
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    .chart_grid{
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width:768px){
+   .search{
+    display: none;
+   }
+}
+
+@media only screen and (max-width:630px){
+    .cards{
+        grid-template-columns: 100%;
+    }
+}
