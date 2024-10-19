@@ -10,9 +10,8 @@ new Morris.Line({
       { year: '2010', value: 25 },
       { year: '2011', value: 5 },
       { year: '2012', value: 30 },
-      { year: '2012', value: 20 },
-      { year: '2012', value: 40 },
-      { year: '2012', value: 50 },
+      { year: '2013', value: 20 },
+      { year: '2014', value: 40 }
     ],
     // The name of the data record attribute that contains x-values.
     xkey: 'year',
@@ -30,9 +29,6 @@ new Morris.Line({
         {label:"In-Store sales", value:30},
         {label:"Mail-order sales", value:40},
     ],
-    colors:['orange','blue','white'],
+    colors:['orange','blue','red'],
     labelColor:'#ffffff'
   })
-
-
-
