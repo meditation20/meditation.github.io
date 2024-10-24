@@ -19,6 +19,9 @@ input,button{
 #menu-toggle:checked~ .sidebar .brand h2{
     display: none;
 }
+#menu-toggle:checked~ .sidebar .brand {
+    display: none;
+}
 
 #menu-toggle:checked~ .sidebar .side-img{
    height: 50px;
@@ -37,6 +40,7 @@ input,button{
     width: 65px;
  }
 
+
  #menu-toggle:checked~ .main-content header{
     left: calc(65px + 1rem);
  }
@@ -54,6 +58,7 @@ input,button{
     background-color: #0b1218;
     overflow-y: auto;
     transition: width 1s;
+    
 }
 
 .brand{
@@ -92,6 +97,7 @@ input,button{
 .sidemenu{
     padding: 0.5rem;
    
+   
 }
 
 .sidemenu li{
@@ -112,6 +118,7 @@ input,button{
 
 .sidemenu a i{
     padding: 10px;
+    
 }
 
 .sidemenu span,i{
@@ -120,6 +127,10 @@ input,button{
 
 .sidemenu li:hover{
     background-color: orange;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
 }
 
 .main-content{
@@ -146,6 +157,7 @@ header{
     top: 0.5rem;
     border-radius: 3px;
     transition: left 1s;
+    z-index: 10;
 }
 
 .menu-toggler{
@@ -209,6 +221,7 @@ main{
 .card:hover {
     transform: translateY(-10px) scale(1.05); 
     box-shadow: 0 8px 20px rgba(0, 162, 255, 0.2); 
+    z-index: 0;
    
 }
 
@@ -409,3 +422,6 @@ main{
         grid-template-columns: 100%;
     }
 }
+
+
+
