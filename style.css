@@ -129,15 +129,13 @@ input,button{
     background-color: orange;
 }
 
-.sidebar::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
-}
+
 
 .main-content{
     height: 100vh;
     overflow-y: auto;
     margin-left: 280px;
-    /* min-height: 100vh; */
+    
     background-color: #121d28;
     padding: 0.5rem 1rem;
     transition: margin-left 1s;
